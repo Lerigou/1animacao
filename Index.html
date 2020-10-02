@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira animação aaaah</title>
+    <style>
+        /* width = largura  */
+        .antena {
+            width: 10px;
+            height: 400px;
+            color: #000000;
+            position: absolute;
+            transform: translateY(90px);
+
+        }
+
+        .eu {
+            width: 150px;
+            height: 150px;
+            border-radius: 50% 50% 10% 10%;
+            background: #e9b3b3;
+            position: absolute;
+            margin: auto;
+            /* transform: translateX(80px);
+    transform: translateY(80px); */
+            transform: translate(80px, 90px);
+            /* transform: scaleX(1); */
+            /* deg = degrees (degraus) */
+            /* transform: rotate(30deg); */
+            animation-name: flutua;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+        }
+
+        .eu::before {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e9b3b3;
+            position: absolute;
+            transform: translate(-14px, 70px);
+            content: "";
+        }
+
+        .eu::after {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e9b3b3;
+            position: absolute;
+            transform: translate(135px, -90px);
+            content: "";
+
+        }
+
+        .olhoD {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #000;
+            transform: translate(85px, 30px);
+
+        }
+
+        .olhoE {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #000;
+            transform: translateX(30px);
+        }
+
+        @keyframes flutua {
+            0% {
+                transform: translate(30px, 30px);
+                opacity: 0;
+                box-shadow: 30px 30px 10px 1px #0000008a;
+            }
+
+            70% {
+                transform: translate(100px, 200px);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(30px, 30px);
+                opacity: 0;
+                box-shadow: 30px 30px 10px 1px #0000008a;
+            }
+        }
+
+        .boca1 {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #000000;
+            transform: translateX(55px);
+        }
+
+        .boca {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e9b3b3;
+            transform: translate(55px, -40px);
+        }
+
+        .shy1 {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #f75656;
+            transform: translate(30px, -65px);
+        }
+
+        .shy2 {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #f75656;
+            transform: translate(96px, -80px);
+        }
+
+        .brilhinho1 {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ffffff;
+            transform: translate(18px, 6px);
+        }
+
+        .brilhinho2 {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ffffff;
+            transform: translate(48px, -24px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="antena"></div>
+
+    <div class="animação">
+        <div class="eu">
+            <div class="olhoD">
+                <div class="brilhinho1"></div>
+            </div>
+            <div class="olhoE"></div>
+            <div class="brilhinho2"></div>
+            <div class="boca1"></div>
+            <div class="boca"></div>
+            <div class="shy1"></div>
+            <div class="shy2"></div>
+        </div>
+    </div>
+
+</body>
+</html>
